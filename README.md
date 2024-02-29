@@ -1,2 +1,0 @@
-# Portfólio THG
- MEU PORTFÒLIO
