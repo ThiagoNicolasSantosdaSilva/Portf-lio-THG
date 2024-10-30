@@ -1,0 +1,627 @@
+/* ---------- RESET BÁSICO ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- ESTILO GLOBAL ---------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+/* ---------- CABEÇALHO PRINCIPAL ---------- */
+/* Estilo geral do cabeçalho */
+#main-header {
+    background-color: #333; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+}
+
+/* Estilo da barra de navegação */
+.navbar {
+    display: flex; /* Usar Flexbox para layout */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaça os itens */
+}
+
+/* Estilo do logo */
+.logo img {
+    max-height: 50px; /* Altura máxima da logo */
+}
+
+/* Links de navegação principais */
+.navbar-links {
+    list-style-type: none; /* Remove marcadores da lista */
+    margin: 0; /* Remove margens da lista */
+    padding: 0; /* Remove padding da lista */
+    display: flex; /* Usar Flexbox para disposição horizontal */
+}
+
+.navbar-links li {
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+.navbar-links a {
+    color: #fff; /* Cor do texto dos links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Deixa o texto em negrito */
+    transition: color 0.3s; /* Efeito de transição suave */
+}
+
+.navbar-links a:hover {
+    color: #007BFF; /* Cor do link ao passar o mouse */
+}
+
+/* Estilo do botão de contato */
+.contact-link {
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-button {
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove bordas */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Efeito de transição suave */
+}
+
+.contact-button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Media query para responsividade */
+@media (max-width: 768px) {
+    .navbar-links {
+        flex-direction: column; /* Coloca os links em coluna em telas menores */
+        display: none; /* Esconde os links inicialmente */
+        position: absolute; /* Posiciona os links */
+        top: 60px; /* Abaixo do cabeçalho */
+        left: 0; /* Alinha à esquerda */
+        background-color: #333; /* Fundo dos links */
+        width: 100%; /* Largura total */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o botão de menu */
+        cursor: pointer; /* Muda o cursor ao passar o mouse */
+        color: #fff; /* Cor do texto do botão de menu */
+    }
+
+    .navbar.active .navbar-links {
+        display: flex; /* Mostra os links quando o menu está ativo */
+    }
+}
+
+
+/* ---------- FIM CABEÇALHO ---------- */
+
+/* ---------- SEÇÃO HOME ---------- */
+.home {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- FIM SEÇÃO HOME ---------- */
+
+/* ---------- SEÇÃO SOBRE ---------- */
+.sobre {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre-card-imagem {
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-card-imagem img {
+    width: 190%;
+    height: 225px;
+    margin-left: -80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sobre-card-imagem h3 {
+    color: #000;
+    margin-top: 10px;
+}
+
+/* Card de descrição */
+.sobre-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 5px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sobre-card h2 {
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.sobre-card p {
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Links de redes sociais */
+.links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.links a {
+    color: #000;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #ffcc00;
+}
+
+/* Botão Saiba Mais */
+.saiba-mais {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: center;
+    transition: background-color 0.3s ease;
+}
+
+.saiba-mais:hover {
+    background-color: #e0b800;
+}
+
+/* ---------- SEÇÃO CERTIFICADOS ---------- */
+.certificados {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.certificados .titulo h1 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.certificado-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificado-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificado-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certificado-card h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.btn-visualizar {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-visualizar:hover {
+    background-color: #e0b800;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .certificado-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- FIM SEÇÃO CERTIFICADOS ---------- */
+
+/* ---------- SEÇÃO PROJETOS ---------- */
+.projetos {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.projetos .titulo h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projeto-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+}
+
+.projeto-card h3 {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.projeto-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* ---------- FIM SEÇÃO PROJETOS ---------- */
+
+/* ---------- SEÇÃO Serviços ---------- */
+/* Estilo Geral da Seção de Serviços */
+.serviços {
+    background-color: #f2f2f2; /* Cor de fundo clara */
+    padding: 50px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 20px;
+}
+
+/* Título da Seção de Serviços */
+.serviços .titulo h1 {
+    font-size: 2.5em; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    margin-bottom: 30px; /* Espaçamento inferior */
+}
+
+/* Container de Serviços */
+.serviços-container {
+    display: flex; /* Usando Flexbox para layout */
+    flex-direction: row; /* Coloca os itens em linha */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte se não houver espaço */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Cartões de Serviço */
+.serviço-card {
+    background-color: #fff; /* Cor de fundo do cartão */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaçamento interno do cartão */
+    margin: 15px; /* Espaçamento entre os cartões */
+    max-width: 300px; /* Largura máxima do cartão */
+    transition: transform 0.2s; /* Transição suave para efeito de hover */
+}
+
+/* Efeito Hover no Cartão */
+.serviço-card:hover {
+    transform: translateY(-5px); /* Levanta o cartão ao passar o mouse */
+}
+
+/* Estilo do Título do Serviço */
+.serviço-card h2 {
+    font-size: 1.5em; /* Tamanho da fonte do título do serviço */
+    color: #007BFF; /* Cor do título do serviço */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estilo da Descrição do Serviço */
+.serviço-card p {
+    font-size: 1em; /* Tamanho da fonte da descrição */
+    color: #555; /* Cor do texto */
+    line-height: 1.6; /* Altura da linha */
+}
+
+/* Responsividade */
+@media (max-width: 320px) {
+    .serviço-card {
+        max-width: 90%; /* Largura máxima do cartão em telas pequenas */
+        padding: 15px; /* Reduz o padding em telas pequenas */
+        margin: 10px 0; /* Ajusta o margin em telas pequenas */
+    }
+
+    .serviços .titulo h1 {
+        font-size: 2em; /* Reduz o tamanho do título em telas pequenas */
+    }
+}
+
+/* ---------- FIM SEÇÃO Serviços ---------- */
+
+/* ---------- SEÇÃO DEPOIMENTO ---------- */
+/* Estilo Geral da Seção */
+.depoimentos {
+    background-color: #fff; /* Cor de fundo clara */
+    padding: 50px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 20px;
+}
+
+/* Título da Seção */
+.depoimentos .titulo h1 {
+    font-size: 2.5em; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    margin-bottom: 30px; /* Espaçamento inferior */
+}
+
+/* Container de Depoimentos */
+.depoimentos-container {
+    display: flex; /* Usando Flexbox para layout */
+    flex-direction: row; /* Coloca os itens em linha */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte se não houver espaço */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Cartões de Depoimento */
+.depoimento-card {
+    background-color: #fff; /* Cor de fundo do cartão */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaçamento interno do cartão */
+    margin: 15px; /* Espaçamento entre os cartões */
+    max-width: 300px; /* Largura máxima do cartão */
+    transition: transform 0.2s; /* Transição suave para efeito de hover */
+}
+
+/* Efeito Hover no Cartão */
+.depoimento-card:hover {
+    transform: translateY(-5px); /* Levanta o cartão ao passar o mouse */
+}
+
+/* Estilo do Texto dentro do Cartão */
+.depoimento-card p {
+    font-size: 1.1em; /* Tamanho da fonte do depoimento */
+    color: #555; /* Cor do texto */
+    line-height: 1.6; /* Altura da linha */
+}
+
+/* Nome do Cliente em Destaque */
+.depoimento-card strong {
+    color: #007BFF; /* Cor do nome do cliente */
+    font-weight: bold; /* Negrito */
+}
+
+/* Responsividade */
+@media (max-width: 320px) {
+    .depoimento-card {
+        max-width: 90%; /* Largura máxima do cartão em telas pequenas */
+        padding: 15px; /* Reduz o padding em telas pequenas */
+        margin: 10px 0; /* Ajusta o margin em telas pequenas */
+    }
+
+    .depoimentos .titulo h1 {
+        font-size: 2em; /* Reduz o tamanho do título em telas pequenas */
+    }
+}
+/* ---------- FIM SEÇÃO DEPOIMENTO ---------- */
+
+/* ---------- SEÇÃO PREMIOS ---------- */
+#premios {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+}
+
+#premios h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.premios-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    gap: 20px; /* Espaço entre os itens */
+}
+
+.premio-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px); /* Cada item ocupa 1/3 da largura do container, menos o espaço do gap */
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos nas dimensões */
+    max-width: calc(33.333% - 20px); /* Limita a largura máxima dos prêmios */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+@media (max-width: 768px) {
+    .premio-item {
+        flex: 1 1 calc(50% - 20px); /* 2 colunas em telas menores */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .premio-item {
+        flex: 1 1 100%; /* 1 coluna em telas ainda menores */
+        max-width: 100%;
+    }
+}
+
+/* ---------- FIM SEÇÃO PREMIOS ---------- */
+
+/* ---------- SEÇÃO EVENTOS ---------- */
+#eventos {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+#eventos h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.eventos-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    gap: 20px; /* Espaço entre os itens */
+}
+
+.evento-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px); /* Cada item ocupa 1/3 da largura do container, menos o espaço do gap */
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos nas dimensões */
+    max-width: calc(33.333% - 20px); /* Limita a largura máxima dos eventos */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+@media (max-width: 768px) {
+    .evento-item {
+        flex: 1 1 calc(50% - 20px); /* 2 colunas em telas menores */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .evento-item {
+        flex: 1 1 100%; /* 1 coluna em telas ainda menores */
+        max-width: 100%;
+    }
+}
+/* ---------- FIM SEÇÃO EVENTOS ---------- */
+
+/* ---------- SEÇÃO CONTATO ---------- */
+.contato {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.contato h1 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-contato {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-contato button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-contato button:hover {
+    background-color: #e0b800;
+}
+
+/* ---------- FIM SEÇÃO CONTATO ---------- */
+
+/* ---------- RODAPÉ ---------- */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0px;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
