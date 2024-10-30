@@ -116,7 +116,7 @@ body {
 
 /* ---------- SEÇÃO SOBRE ---------- */
 .sobre {
-    margin-top: 70px;
+    margin-top: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,9 +144,9 @@ body {
 }
 
 .sobre-card-imagem img {
-    width: 190%;
+    width: 100%;
     height: 225px;
-    margin-left: -80px;
+    margin-left: 5px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
@@ -217,6 +217,49 @@ body {
 
 .saiba-mais:hover {
     background-color: #e0b800;
+}
+
+/* ---------- MEDIA QUERIES PARA RESPONSIVIDADE ---------- */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        align-items: center; /* Centraliza itens */
+    }
+
+    .sobre-card-imagem {
+        width: 100%; /* Ocupa a largura total */
+        margin-bottom: 20px; /* Espaço entre imagem e card */
+    }
+
+    .sobre-card {
+        max-width: 90%; /* Limita a largura do card */
+    }
+
+    .sobre-card h2 {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte em telas pequenas */
+    }
+
+    .sobre-card p {
+        font-size: 1rem; /* Ajusta o tamanho do texto */
+    }
+
+    .links a {
+        font-size: 1rem; /* Ajusta o tamanho do texto dos links */
+    }
+
+    .saiba-mais {
+        padding: 8px 15px; /* Ajusta o padding do botão */
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-card h2 {
+        font-size: 1.2rem; /* Tamanho ainda menor para telas muito pequenas */
+    }
+
+    .sobre-card p {
+        font-size: 0.9rem; /* Tamanho do texto ajustado */
+    }
 }
 
 /* ---------- SEÇÃO CERTIFICADOS ---------- */
@@ -470,6 +513,7 @@ body {
 /* ---------- FIM SEÇÃO DEPOIMENTO ---------- */
 
 /* ---------- SEÇÃO PREMIOS ---------- */
+/* ---------- SEÇÃO PRÊMIOS ---------- */
 #premios {
     padding: 40px 20px;
     background-color: #f9f9f9;
@@ -477,12 +521,13 @@ body {
 }
 
 #premios h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #000;
     margin-bottom: 20px;
     text-align: center;
 }
 
+/* Container dos prêmios */
 .premios-container {
     display: flex;
     flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
@@ -490,6 +535,7 @@ body {
     gap: 20px; /* Espaço entre os itens */
 }
 
+/* Item de prêmio */
 .premio-item {
     background-color: #fff;
     padding: 20px;
@@ -499,8 +545,16 @@ body {
     box-sizing: border-box; /* Garante que padding e border sejam incluídos nas dimensões */
     max-width: calc(33.333% - 20px); /* Limita a largura máxima dos prêmios */
     text-align: left; /* Alinha o texto à esquerda */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efeito suave ao passar o mouse */
 }
 
+/* Efeito ao passar o mouse sobre o item de prêmio */
+.premio-item:hover {
+    transform: translateY(-5px); /* Levanta o item ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .premio-item {
         flex: 1 1 calc(50% - 20px); /* 2 colunas em telas menores */
